@@ -1,77 +1,83 @@
 html, body {
     height: 100%;
     margin: 0;
-    background-color: #1e1e1e;
+    background-color: #F5F1EA;
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    button {
+        background-color: #0F1D33;
+        color: #FAF7F2;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }  
 }
 
 .quadradao {
-    background-color: rgb(82, 66, 118);
+    background-color: #FAF7F2;
     width: 300px;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-
+    border: 3px solid #C8960C;
+    
     h1 {
-        color: black;
+        color: #1B2A4A;
     }
     p {
-        color: black;
+        color: #1B2A4A;
     }
     a {
-        color: black;
-    }
-}
-.menu {
-    background-color: rgb(82, 66, 118);
-    width: 800px;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-
-    h1 {
-        color: black;
-    }
-    p {
-        color: black;
-    }
-    a {
-        color: black;
+        color: #0F1D33;
     }
     button {
-        background-color: rgb(82, 66, 118);
-        color: black;
+        background-color: #0F1D33;
+        color: #FAF7F2;
         border: none;
         padding: 10px 20px;
         border-radius: 5px;
         cursor: pointer;
     }
 }
-.menu2 {
-    background-color: rgb(82, 66, 118);
+.menu {
+    background-color: #FAF7F2;
     width: 400px;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    border: 3px solid #C8960C;
 
     h1 {
-        color: black;
+        color: #1B2A4A;
+    }
+    h3 {
+        color: #1B2A4A;
     }
     p {
-        color: black;
+        color: #1B2A4A;
     }
     a {
-        color: black;
+        background-color: #0F1D33;
+        color: #FAF7F2;
     }
     button {
-        background-color: rgb(82, 66, 118);
-        color: black;
+        background-color: #0F1D33;
+        color: #FAF7F2;
         border: none;
         padding: 10px 20px;
         border-radius: 5px;
         cursor: pointer;
-    }
+    }  
+}
+.sair {
+        background-color: red;
+        color: #FAF7F2;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
 }
