@@ -28,6 +28,9 @@ aplicada a letras e números separadamente) (Este sistema ja estava pronto no me
 - `sistema.py` — backend em Flask, com as rotas `/login` e `/cadastro`
 - `dados.csv` — arquivo onde os usuários cadastrados são salvos
 
+  --- Novo ---
+- `reg_contratos` - página de registro de contratos
+
 > Como rodar
 
 1. Instale as dependências:
