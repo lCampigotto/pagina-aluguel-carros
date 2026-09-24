@@ -9,19 +9,16 @@
 <body>
     <div class="quadradao">
         <h1>CADASTRO</h1>
-        <input type="text" placeholder="Usuário">
+        <form id="formCadastro">
+        <input type="text" id="usuario" placeholder="Usuário">
         <br>
-        <input type="text" placeholder="Senha">
+        <input type="text" id="senha" placeholder="Senha">
         <br></br>
-        <button id="botao">Cadastrar-se</button>
-
-        <script>
-        document.getElementById('botao').addEventListener('click', function() {
-        window.location.href = 'pag_login.html';
-        });
-        </script>
+        <button type="submit" id="cadastrar">Cadastrar-se</button>
+        </form>
         <br></br>
         <a href="pag_login.html">Login</a>
     </div>
+    <script src="cadastro.js"></script>
 </body>
 </html>

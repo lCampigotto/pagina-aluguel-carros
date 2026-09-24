@@ -1,9 +1,12 @@
 import csv   # já tinha feito esse sistema antes, só olhar no github --- link[https://github.com/lCampigotto/Codificador-de-Registro]
 
 
-from flask import Flask
-app = Flask(__name__)
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+import csv
 
+app = Flask(__name__)
+CORS(app)
 
 
 def leitor_arquivo(caminho):
@@ -43,8 +46,25 @@ def codificar_senha(senha):
     return resultado
 
 
-@app.route('/')
-def home():
-    return 'Servidor funcionando!'
+@app.route('/login', methods=['POST'])
+def login():
+    dados = request.get_json()
+    usuario = codificar_usuario(dados['usuario'])
+    senha = codificar_senha(dados['senha'])
+
+    if verificar_login(usuario, senha):
+        return jsonify({"sucesso": True, "mensagem": "Login realizado"})
+    else:
+        return jsonify({"sucesso": False, "mensagem": "Usuário ou senha inválidos"}), 401
+
+@app.route('/cadastro', methods=['POST'])
+def cadastro():
+    dados = request.get_json()
+    usuario = codificar_usuario(dados['usuario'])
+    senha = codificar_senha(dados['senha'])
+
+    cadastrar_usuario(usuario, senha)
+    return jsonify({"sucesso": True, "mensagem": "Usuário cadastrado"})
+
 if __name__ == '__main__':
     app.run(debug=True)
