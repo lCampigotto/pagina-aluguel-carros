@@ -25,3 +25,53 @@ html, body {
         color: black;
     }
 }
+.menu {
+    background-color: rgb(82, 66, 118);
+    width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+
+    h1 {
+        color: black;
+    }
+    p {
+        color: black;
+    }
+    a {
+        color: black;
+    }
+    button {
+        background-color: rgb(82, 66, 118);
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+.menu2 {
+    background-color: rgb(82, 66, 118);
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+
+    h1 {
+        color: black;
+    }
+    p {
+        color: black;
+    }
+    a {
+        color: black;
+    }
+    button {
+        background-color: rgb(82, 66, 118);
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
