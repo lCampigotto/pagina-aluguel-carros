@@ -10,15 +10,18 @@
 	<div class="menu">
         <h1>REGISTRAR VEÍCULO</h1>
         <h3>Preencha os Dados</h3>
-        <input type="text" placeholder="Placa">
+    <form id="formVeiculo">
+        <input type="text" id="placa" placeholder="Placa">
         <br>
-        <input type="text" placeholder="Marca/Modelo">
+        <input type="text" id="marcaModelo" placeholder="Marca/Modelo">
         <br>
-        <input type="text" placeholder="Tipo (Carro ou Moto)">
+        <input type="text" id="tipo" placeholder="Tipo (Carro ou Moto)">
         <br><br>
-        <button onclick="alert('Cliente registrado com sucesso!')">REGISTRAR</a></button>
+        <button type="submit">REGISTRAR</button>
+    </form>  
         <br><br>
         <button type="submit" ><a href="landpage.html">VOLTAR</a></button>
-	</div>
+    </div>
+    <script src="veiculo.js"></script>
 </body>
 </html>

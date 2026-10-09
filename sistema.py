@@ -4,9 +4,11 @@ import csv   # já tinha feito esse sistema antes, só olhar no github --- link[
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import csv
+import psycopg2
 
 app = Flask(__name__)
 CORS(app)
+
 
 
 def leitor_arquivo(caminho):
@@ -45,6 +47,14 @@ def codificar_senha(senha):
             resultado += numero
     return resultado
 
+def conectar_banco():
+    return psycopg2.connect(
+        dbname="conecteste",
+        user="postgres",
+        password="Watanabe#13031003",
+        host="localhost",
+        port="5432"
+    )
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -65,6 +75,28 @@ def cadastro():
 
     cadastrar_usuario(usuario, senha)
     return jsonify({"sucesso": True, "mensagem": "Usuário cadastrado"})
+
+@app.route('/veiculos', methods=['POST'])
+def veiculos():
+    dados = request.get_json()
+    placa = dados['placa'].upper()
+    marcaModelo = dados['marcaModelo']
+    tipo = dados['tipo'].lower()
+
+    try:
+        conexao = conectar_banco()
+        cursor = conexao.cursor()
+        cursor.execute(
+            "INSERT INTO veiculos (placa, marcaModelo, tipo) VALUES (%s, %s, %s)",
+            (placa, marcaModelo, tipo)
+        )
+        conexao.commit()
+        cursor.close()
+        conexao.close()
+        return jsonify({"sucesso": True, "mensagem": "Veículo registrado"})
+    except psycopg2.Error as erro:
+        print(erro)
+        return jsonify({"sucesso": False, "mensagem": "Não foi possível registrar o veículo"}), 400
 
 if __name__ == '__main__':
     app.run(debug=True)
