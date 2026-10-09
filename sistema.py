@@ -51,7 +51,7 @@ def conectar_banco():
     return psycopg2.connect(
         dbname="conecteste",
         user="postgres",
-        password="Watanabe#13031003",
+        password="xxxxxxx", # senha fica aí
         host="localhost",
         port="5432"
     )
