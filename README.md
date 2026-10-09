@@ -33,6 +33,9 @@ pronto no meu GitHub --- link [https://github.com/lCampigotto/Codificador-de-Reg
 - `sistema.py` — backend em Flask, com as rotas `/login`, `/cadastro` e `/veiculos`
 - `dados.csv` — arquivo onde os usuários cadastrados são salvos
 
+  --- Novo ---
+- `reg_contratos` - página de registro de contratos
+
 > Como rodar
 
 Requisitos: Python 3.14+ e PostgreSQL rodando na máquina, com a tabela
